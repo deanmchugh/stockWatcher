@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import HomePage from './components/home'
+
 function Main() {
     return (
-        <div>
-            <h1>main page</h1>
-        </div>
+        <HomePage />
     )
 }
 
