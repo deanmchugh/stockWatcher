@@ -2193,4 +2193,13 @@ parse(
     `, {
         trim: true,
         skip_empty_lines: true
-    })
+})
+.on('readable', function(){
+    let record
+    while (record = this.read()) {
+        output.push(record)
+    }
+})
+.on('end', function(){
+    console.log(output)
+})
