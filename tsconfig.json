@@ -11,7 +11,7 @@
     },
     "include": [
       "src/**/*.tsx",
-      "src/**/*.ts"
+      "src/**/*.ts", "src/helpers/csvParser.js"
     ]
   }
   
