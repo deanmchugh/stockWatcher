@@ -2,9 +2,9 @@ import { ASXCodes } from '../data'
 
 export default function stockComp(dataType: string) {
     return new Promise((res, rej) => {
-        const name: string[] = []
-        const code: string[] = []
-        const desc: string[] = []
+        const name: Array<string> = []
+        const code: Array<string> = []
+        const desc: Array<string> = []
         const compData = ASXCodes.split('"\n')
         compData.forEach(function(comp, idx, arr) {
             const splitCompData = comp.split('\",\"')
