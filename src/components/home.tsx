@@ -1,19 +1,23 @@
 import React, { MouseEvent } from 'react'
-import fetch from '../helpers/fetchData'
-import stocks from '../helpers/stockCompanies'
+import fetchAPI from '../helpers/fetchAPI'
+import fetchHTML from '../helpers/fetchHTML'
+import stocksData from '../helpers/stockCompanies'
 
 export default function home() {
     return (
         <div id='mainPage'>
             <h1>market tracker</h1>
             <button onClick={(event: MouseEvent) => {
-                    stocks('code')
+                    fetchHTML('https://www.realestate.com.au/buy/in-brisbane+-+greater+region,+qld/list-1')
+                    /*STOCK MARKET
+                    stocksData('code')
                     .then((res) => {
                         const compCodes: any = res
                         compCodes.forEach((code: string) => {
-                            fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${code}&interval=5min&apikey=${process.env.REACT_APP_ALPHA_KEY}`)
+                            fetchAPI(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${code}&interval=5min&apikey=${process.env.REACT_APP_ALPHA_KEY}`)
                         })
                     })
+                    */
                 }
             }>fetch</button>
         </div>
